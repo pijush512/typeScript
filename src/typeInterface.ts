@@ -114,3 +114,6 @@ const employee1: Employee = {
 };
 
 console.log(employee1)
+
+// For termanil check 
+//!! npx tsx src/typeInterface.ts

@@ -68,3 +68,7 @@ users.map((user) => {
 })
 
 console.log(newArr);
+
+
+// For termanil check 
+//!! npx tsx src/basic.ts

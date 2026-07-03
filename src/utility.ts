@@ -127,3 +127,48 @@ const account: Readonly<BankAccount> = {
   holderName: "Jac",
   balance: 5000,
 };
+
+// -------------------Type narroeing-----------
+
+// Create a function named formatValue that accepts a parameter of type string | number. If the value is a string, print it in uppercase. If it's a number, print it with two decimal places using toFixed(2). Then call the function once with a string and once with a number.
+
+function formatValue (value: string | number) {
+  if(typeof value === "string") {
+    console.log(value.toUpperCase());
+  }
+  else {
+    console.log(value.toFixed(2));
+  }
+}
+
+formatValue("jac")
+formatValue(10);
+
+// Create two interfaces (Car and Bike), write a function printVehicleInfo(vehicle: Car | Bike) that uses the in operator to detect whether the object has the wheels property, then print the vehicle information and call the function with one Car object and one Bike object.
+
+interface Car {
+  brand: string;
+  price: number;
+}
+interface Bike {
+  brand: string;
+  engineCC: number;
+}
+
+function printVehicleInfo(shorowm: Car | Bike) {
+ if("engineCC" in shorowm){
+  console.log("Bike")
+ }
+ else {
+console.log("Car")
+ }
+}
+
+printVehicleInfo({
+  brand: "Primieo",
+  price: 15000000,
+});
+printVehicleInfo({
+  brand:"4V",
+  engineCC: 150,
+})
